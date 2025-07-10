@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* Палитра цветов */
+/* Глобальные стили */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Onest", sans-serif;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Секция фильтров */
+.filters-section {
+  background-color: #6156C9;
+  padding: 1rem 0;
+}
+.filters-section .form-select,
+.filters-section .form-control {
+  background-color: rgb(133.134529148, 124.6502242152, 213.3497757848);
+  border: none;
+  color: #fff;
+}
+.filters-section .form-select option {
+  color: #333;
+}
+.filters-section .btn {
+  color: #fff;
+  border-color: #fff;
+}
+.filters-section .btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Теги-фильтры */
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: #5AC8FA;
+  border: none;
+}
+.tag.purple {
+  background-color: #6156C9;
+}
+.tag.green {
+  background-color: #7ED321;
+}
+.tag.orange {
+  background-color: #F5A623;
+}
+.tag.pink {
+  background-color: #FF7596;
+}
+
+/* Карточка события */
+.event-card {
+  border: 24px solid #F2F2F2;
+  border-bottom: 16px solid #F2F2F2;
+  border-radius: 18px;
+  background: #F2F2F2;
+  overflow: hidden;
+}
+.event-card .card-img-top {
+  border-radius: 18px;
+  height: 270px;
+  object-fit: cover;
+}
+.event-card .event-datetime {
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+.event-card .card-body {
+  padding: 0;
+  padding-top: 16px;
+}
+.event-card .card-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.event-card .price {
+  background-color: #F5A623;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+.event-card .status {
+  background-color: #F7F7F7;
+  color: #333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+.event-card .status.cancelled {
+  color: #FF3B30;
+}
+
+/* Кнопка-иконка в карточке */
+.icon-btn {
+  padding: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

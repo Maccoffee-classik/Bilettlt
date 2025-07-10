@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilettlt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@500;700;900&family=Onest:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Фильтры -->
+    <div class="filters-section py-4">
+        <div class="row g-3 align-items-center">
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>События</option>
+                    <option value="1">Концерт</option>
+                    <option value="2">Выставка</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Площадка</option>
+                    <option value="1">Площадка 1</option>
+                    <option value="2">Площадка 2</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Город</option>
+                    <option value="1">Тольятти</option>
+                    <option value="2">Самара</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input type="date" class="form-control" placeholder="Дата, с">
+            </div>
+            <div class="col-md-2">
+                <input type="date" class="form-control" placeholder="по">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-light w-100">Все фильтры</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Теги-фильтры -->
+    <div class="tag-filters mb-3">
+        <button type="button" class="tag purple">Пушкинская карта</button>
+        <button type="button" class="tag blue">Детям</button>
+        <button type="button" class="tag green">Рекомендуемые события</button>
+        <button type="button" class="tag orange">Юмор</button>
+        <button type="button" class="tag pink">Местные театры</button>
+        <button type="button" class="tag">На этой неделе</button>
+        <button type="button" class="tag">В этом месяце</button>
+    </div>
+
+    <!-- Сетка карточек событий -->
+    <div class="row g-1">
+        <!-- Карточка события -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card event-card">
+                <div class="card-img-container position-relative">
+                    <img src="img/knyazz.png" class="card-img-top" alt="Event Image">
+                    <button class="btn btn-light btn-sm icon-btn position-absolute top-0 end-0 m-2">
+                        <i class="bi bi-bookmark"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <p class="event-datetime">31 мая, 19:00 — КЦ "Автоград"</p>
+                    <h5 class="card-title">Название события</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price">от 2 500 ₽</span>
+                        <span class="status cancelled">Отменен</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Еще одна карточка -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card event-card">
+                <div class="card-img-container position-relative">
+                    <img src="img/zara.png" class="card-img-top" alt="Event Image">
+                    <button class="btn btn-light btn-sm icon-btn position-absolute top-0 end-0 m-2">
+                        <i class="bi bi-bookmark"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <p class="event-datetime">1 июня, 20:00 — ДК "Приморский"</p>
+                    <h5 class="card-title">Еще одно событие</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price">от 1 000 ₽</span>
+                        <!-- Статус отсутствует -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card event-card">
+                <div class="card-img-container position-relative">
+                    <img src="img/knyazz.png" class="card-img-top" alt="Event Image">
+                    <button class="btn btn-light btn-sm icon-btn position-absolute top-0 end-0 m-2">
+                        <i class="bi bi-bookmark"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <p class="event-datetime">31 мая, 19:00 — КЦ "Автоград"</p>
+                    <h5 class="card-title">Название события</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price">от 2 500 ₽</span>
+                        <span class="status cancelled">Отменен</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Еще одна карточка -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card event-card">
+                <div class="card-img-container position-relative">
+                    <img src="img/zara.png" class="card-img-top" alt="Event Image">
+                    <button class="btn btn-light btn-sm icon-btn position-absolute top-0 end-0 m-2">
+                        <i class="bi bi-bookmark"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <p class="event-datetime">1 июня, 20:00 — ДК "Приморский"</p>
+                    <h5 class="card-title">Еще одно событие</h5>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price">от 1 000 ₽</span>
+                        <!-- Статус отсутствует -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Дополнительные карточки аналогично -->
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

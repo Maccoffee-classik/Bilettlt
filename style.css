@@ -3,6 +3,7 @@
 /* Глобальные стили */
 body {
   font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
   font-family: "Lato", sans-serif;
   font-family: "Onest", sans-serif;
 }
@@ -14,21 +15,34 @@ body {
 
 /* Секция фильтров */
 .filters-section {
-  background-color: #6156C9;
-  padding: 1rem 0;
+  background-color: #564dbb;
+  padding: 1rem;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
 }
 .filters-section .form-select,
 .filters-section .form-control {
-  background-color: rgb(133.134529148, 124.6502242152, 213.3497757848);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   border: none;
   color: #fff;
+  border-radius: 20px;
+  padding: 9px 16px;
+  background: rgba(70, 66, 66, 0.6);
 }
 .filters-section .form-select option {
   color: #333;
 }
 .filters-section .btn {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   color: #fff;
-  border-color: #fff;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 9px 16px;
 }
 .filters-section .btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -39,27 +53,47 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .tag {
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  border-radius: 18px;
+  padding: 6.5px 16px 9.5px 16px;
+  font-size: 12px;
+  line-height: 133%;
   color: #fff;
-  background-color: #5AC8FA;
   border: none;
 }
 .tag.purple {
-  background-color: #6156C9;
+  background-color: #f9f5ff;
+  color: #7f56d9;
+}
+.tag.blue {
+  background-color: #eff6ff;
+  color: #2b68e5;
 }
 .tag.green {
-  background-color: #7ED321;
+  background-color: #effaf3;
+  color: #2c9d67;
 }
 .tag.orange {
-  background-color: #F5A623;
+  background-color: #fffaec;
+  color: #ff7900;
+}
+.tag.orange:hover {
+  background-color: #ff7900;
+  color: #fff;
+}
+.tag.cream {
+  background-color: #ffeee0;
+  color: #9f4709;
 }
 .tag.pink {
-  background-color: #FF7596;
+  background-color: #ffe8fa;
+  color: #d95682;
 }
 
 /* Карточка события */
@@ -90,7 +124,7 @@ body {
   color: #333;
 }
 .event-card .price {
-  background-color: #F5A623;
+  background-color: #fffaec;
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: 5px;

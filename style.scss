@@ -1,9 +1,10 @@
 /* Палитра цветов */
-$color-purple: #6156C9;
-$color-blue: #5AC8FA;
-$color-green: #7ED321;
-$color-orange: #F5A623;
-$color-pink: #FF7596;
+$color-purple: #f9f5ff;
+$color-blue: #eff6ff;
+$color-green: #effaf3;
+$color-orange: #fffaec;
+$color-cream: #ffeee0;
+$color-pink: #ffe8fa;
 $color-light: #F7F7F7;
 $color-dark: #333;
 $font-ubuntu: 'Ubuntu', sans-serif;
@@ -14,10 +15,12 @@ $font-ubuntu-light: 300;
 $font-ubuntu-medium: 500;
 $font-ubuntu-bold: 700;
 $font-ubuntu-italic: italic;
+$font-lato-medium: 500;
 
 /* Глобальные стили */
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
   font-family: 'Lato', sans-serif;
   font-family: 'Onest', sans-serif;
 
@@ -30,20 +33,36 @@ body {
 
 /* Секция фильтров */
 .filters-section {
-  background-color: $color-purple;
-  padding: 1rem 0;
+  background-color:  #564dbb;
+  padding: 1rem ;
+
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+
   .form-select,
   .form-control {
-    background-color: lighten($color-purple, 10%);
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+
     border: none;
     color: #fff;
+    border-radius: 20px;
+    padding: 9px 16px;
+    background: rgba(70, 66, 66, 0.6);
   }
   .form-select option {
     color: $color-dark;
   }
   .btn {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
     color: #fff;
-    border-color: #fff;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 9px 16px;
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -55,18 +74,37 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .tag {
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
+
+  font-family:$font-lato;
+  font-weight: $font-lato-medium;
+  border-radius: 18px;
+  padding: 6.5px 16px 9.5px 16px;
+  font-size: 12px;
+  line-height: 133%;
   color: #fff;
-  background-color: $color-blue;
   border: none;
-  &.purple { background-color: $color-purple; }
-  &.green { background-color: $color-green; }
-  &.orange { background-color: $color-orange; }
-  &.pink { background-color: $color-pink; }
+  &.purple { background-color: $color-purple;
+              color: #7f56d9;      }
+  &.blue {
+    background-color: $color-blue;
+    color: #2b68e5;
+  }
+  &.green { background-color: $color-green;
+    color: #2c9d67;}
+  &.orange { background-color: $color-orange;
+    color: #ff7900;
+  &:hover { background-color:#ff7900;
+    color: #fff;
+
+  }}
+  &.cream { background-color: $color-cream;
+    color: #9f4709;}
+  &.pink { background-color: $color-pink;
+    color: #d95682;}
 }
 
 /* Карточка события */

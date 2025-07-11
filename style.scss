@@ -5,8 +5,12 @@ $color-green: #effaf3;
 $color-orange: #fffaec;
 $color-cream: #ffeee0;
 $color-pink: #ffe8fa;
+$color-gold: #bb8a4d;
+$color-dark-grey: #dcdcdc;
+$color-dark-grey-text: #838383;
 $color-light: #F7F7F7;
-$color-dark: #333;
+$color-dark: #000;
+$color-white:#fff;
 $font-ubuntu: 'Ubuntu', sans-serif;
 $font-lato: 'Lato', sans-serif;
 $font-onest: 'Onest', sans-serif;
@@ -16,12 +20,14 @@ $font-ubuntu-medium: 500;
 $font-ubuntu-bold: 700;
 $font-ubuntu-italic: italic;
 $font-lato-medium: 500;
+$font-lato-bold: 700;
 
 /* Глобальные стили */
 body {
   font-family: $font-ubuntu;
   font-weight: $font-ubuntu-regular;
-  font-family: 'Lato', sans-serif;
+  font-family: $font-lato;
+  font-weight: $font-lato-bold;
   font-family: 'Onest', sans-serif;
 
 }
@@ -116,8 +122,18 @@ body {
 
 
   overflow: hidden;
-  .card-img-container {
 
+  .card-img-container {
+    .btn {
+      width: 32px;
+      height: 32px;
+      margin-top: 12px;
+      margin-right: 12px;
+    }
+    .tag-filters {
+      margin: 8px;
+
+    }
   }
   .card-img-top {
     border-radius: 18px;
@@ -126,39 +142,78 @@ body {
     object-fit: cover;
   }
   .event-datetime {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
     font-size: 0.875rem;
     color: $color-dark;
-    margin-bottom: 0.25rem;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    line-height: 114%;
+    color: $color-dark-grey-text;
+    img {
+      margin-bottom: 3px;
+    }
+
   }
   .card-body {
     padding: 0;
     padding-top: 16px;
   }
   .card-title {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    font-size: 20px;
+    line-height: 130%;
+
+    margin-bottom: 16px;
     color: $color-dark;
+
   }
   .price {
-    background-color: $color-orange;
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    font-size: 14px;
+    line-height: 143%;
+    background-color: $color-gold;
     color: #fff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 5px;
-    font-size: 0.875rem;
+    border-radius: 18px;
+    padding: 4px 8px;
+    width: 83px;
+    height: 28px;
+
   }
-  .status {
-    background-color: $color-light;
+  .status-cancelled {
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    font-size: 14px;
+    line-height: 143%;
+    background-color: $color-dark-grey;
     color: $color-dark;
-    padding: 0.25rem 0.5rem;
-    border-radius: 5px;
-    font-size: 0.875rem;
-    &.cancelled { color: #FF3B30; } // цвет для отмененных
+    border-radius: 18px;
+    padding: 4px 8px;
+
   }
+
+}
+
+.event-card.event-card-cancelled{
+  border: 24px solid $color-white;
+  border-bottom : 16px solid $color-white;
+  border-radius: 18px;
+  background: $color-white;
+  box-shadow: 0 0 0 1px #f4f4f4;
+  .card-title {
+    color: #747474;
+  }
+
 }
 
 /* Кнопка-иконка в карточке */
 .icon-btn {
-  padding: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
+  background-color: #F2F2F2;
+
+  border-radius: 8px;
+
 }

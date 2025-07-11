@@ -5,6 +5,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-family: "Lato", sans-serif;
+  font-weight: 700;
   font-family: "Onest", sans-serif;
 }
 
@@ -32,7 +33,7 @@ body {
   background: rgba(70, 66, 66, 0.6);
 }
 .filters-section .form-select option {
-  color: #333;
+  color: #000;
 }
 .filters-section .btn {
   font-family: "Ubuntu", sans-serif;
@@ -104,48 +105,83 @@ body {
   background: #F2F2F2;
   overflow: hidden;
 }
+.event-card .card-img-container .btn {
+  width: 32px;
+  height: 32px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.event-card .card-img-container .tag-filters {
+  margin: 8px;
+}
 .event-card .card-img-top {
   border-radius: 18px;
   height: 270px;
   object-fit: cover;
 }
 .event-card .event-datetime {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
   font-size: 0.875rem;
-  color: #333;
-  margin-bottom: 0.25rem;
+  color: #000;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 114%;
+  color: #838383;
+}
+.event-card .event-datetime img {
+  margin-bottom: 3px;
 }
 .event-card .card-body {
   padding: 0;
   padding-top: 16px;
 }
 .event-card .card-title {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  color: #000;
 }
 .event-card .price {
-  background-color: #fffaec;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  background-color: #bb8a4d;
   color: #fff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  font-size: 0.875rem;
+  border-radius: 18px;
+  padding: 4px 8px;
+  width: 83px;
+  height: 28px;
 }
-.event-card .status {
-  background-color: #F7F7F7;
-  color: #333;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  font-size: 0.875rem;
+.event-card .status-cancelled {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  background-color: #dcdcdc;
+  color: #000;
+  border-radius: 18px;
+  padding: 4px 8px;
 }
-.event-card .status.cancelled {
-  color: #FF3B30;
+
+.event-card.event-card-cancelled {
+  border: 24px solid #fff;
+  border-bottom: 16px solid #fff;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #f4f4f4;
+}
+.event-card.event-card-cancelled .card-title {
+  color: #747474;
 }
 
 /* Кнопка-иконка в карточке */
 .icon-btn {
-  padding: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
+  background-color: #F2F2F2;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

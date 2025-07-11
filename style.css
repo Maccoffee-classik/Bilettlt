@@ -121,6 +121,7 @@ body {
 
 /* Карточка события */
 .event-card {
+  height: 100%;
   border: 24px solid #F2F2F2;
   border-bottom: 16px solid #F2F2F2;
   border-radius: 18px;

@@ -74,13 +74,25 @@ body {
   background-color: #f9f5ff;
   color: #7f56d9;
 }
+.tag.purple:hover {
+  background-color: #7f56d9;
+  color: #fff;
+}
 .tag.blue {
   background-color: #eff6ff;
   color: #2b68e5;
 }
+.tag.blue:hover {
+  background-color: #2b68e5;
+  color: #fff;
+}
 .tag.green {
   background-color: #effaf3;
   color: #2c9d67;
+}
+.tag.green:hover {
+  background-color: #2c9d67;
+  color: #fff;
 }
 .tag.orange {
   background-color: #fffaec;
@@ -94,9 +106,17 @@ body {
   background-color: #ffeee0;
   color: #9f4709;
 }
+.tag.cream:hover {
+  background-color: #9f4709;
+  color: #fff;
+}
 .tag.pink {
   background-color: #ffe8fa;
   color: #d95682;
+}
+.tag.pink:hover {
+  background-color: #d95682;
+  color: #fff;
 }
 
 /* Карточка события */

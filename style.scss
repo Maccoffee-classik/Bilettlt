@@ -162,6 +162,8 @@ body {
 }
 
 /* Карточка события */
+
+
 .event-card {
   height: 100%;
   border: 24px solid #F2F2F2;
@@ -275,6 +277,9 @@ body {
     width: 100%;
   }
 }
+.banner-wrapper {
+  order: 13; // после 12-й карточки по умолчанию
+}
 .vertical-banner {
   height: 100%;
   border-radius: 24px;
@@ -311,6 +316,24 @@ body {
 
 
   }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .row-xxl-5-cols > .col {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .banner-wrapper {
+    order: 16;
+  }
+  .row-xxl-5-cols .col:nth-child(n+28) {
+    display: none !important;
+  }
+
 }
 
 

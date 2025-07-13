@@ -152,6 +152,18 @@ body {
   height: 32px;
   margin-top: 12px;
   margin-right: 12px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  background-image: url("img/bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 18px;
+  border: none;
+  padding: 0;
+}
+.event-card .card-img-container .btn.active {
+  background-image: url("img/bookmark_check.svg");
+  background-size: 32px 32px;
 }
 .event-card .card-img-container .tag-filters {
   margin: 8px;
@@ -211,6 +223,7 @@ body {
   color: #000;
   border-radius: 18px;
   padding: 4px 8px;
+  display: none;
 }
 
 .event-card.event-card-cancelled {
@@ -223,13 +236,17 @@ body {
 .event-card.event-card-cancelled .card-title {
   color: #747474;
 }
-
-/* Кнопка-иконка в карточке */
-.icon-btn {
-  background-color: #f2f2f2;
-  border-radius: 8px;
+.event-card.event-card-cancelled img {
+  filter: grayscale(100%);
+}
+.event-card.event-card-cancelled .price {
+  display: none;
+}
+.event-card.event-card-cancelled .status-cancelled {
+  display: block;
 }
 
+/* Кнопка-иконка в карточке */
 .banner-block img {
   width: 100%;
 }

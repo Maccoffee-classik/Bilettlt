@@ -16,14 +16,54 @@ body {
 }
 
 /* Секция фильтров */
-.filters-section {
+.filter-block {
   background-color: #564dbb;
-  padding: 1rem;
-  border-bottom-right-radius: 24px;
-  border-bottom-left-radius: 24px;
+  border-radius: 0 0 24px 24px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
 }
-.filters-section .form-select,
-.filters-section .form-control {
+@media (max-width: 376px) {
+  .filter-block {
+    border-radius: 0 0 16px 16px;
+  }
+}
+.filter-block__icon {
+  margin-left: 8px;
+  display: inline-flex !important;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .filter-block__icon {
+    margin-left: 0px;
+    padding: 4px 2px;
+  }
+}
+@media (max-width: 577px) {
+  .filter-block__icon {
+    margin-left: auto;
+  }
+}
+.filter-block__icon.rotated .filter-block__arrow {
+  transform: rotate(180deg);
+}
+.filter-block__icon .filter-block__arrow {
+  transition: transform 0.3s ease;
+}
+.filter-block .form-group {
+  margin-right: 1px;
+}
+.filter-block__filter-placeholder {
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.filter-block input[type=date] {
+  color: transparent;
+}
+.filter-block__select, .filter-block__input {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -33,10 +73,18 @@ body {
   padding: 9px 16px;
   background: rgba(70, 66, 66, 0.6);
 }
-.filters-section .form-select option {
-  color: #000;
+.filter-block__input-left {
+  border-radius: 20px 0 0 24px;
+  margin-right: 1px;
 }
-.filters-section .btn {
+.filter-block__input-right {
+  border-radius: 0 20px 20px 0;
+}
+.filter-block__select:focus, .filter-block__input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.filter-block__toggle {
   display: flex;
   margin-left: auto;
   font-family: "Ubuntu", sans-serif;
@@ -48,10 +96,66 @@ body {
   border-radius: 20px;
   padding: 9px 16px;
 }
-.filters-section .btn:hover {
+@media (max-width: 768px) {
+  .filter-block__toggle {
+    font-size: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .filter-block__toggle {
+    font-size: 14px !important;
+    width: 100%;
+  }
+}
+.filter-block__toggle:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+@media (max-width: 768px) {
+  .filter-block .filter-block__extra {
+    flex-wrap: wrap;
+  }
+}
 
+/*
+.filters-section {
+  background-color:  #564dbb;
+  padding: 1rem ;
+
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+
+  .form-select,
+  .form-control {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 9px 16px;
+    background: rgba(70, 66, 66, 0.6);
+  }
+  .form-select option {
+    color: $color-dark;
+  }
+  .btn {
+    display: flex;
+    margin-left: auto;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 9px 16px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+*/
 /* Теги-фильтры */
 .tag-filters {
   display: flex;
@@ -59,6 +163,14 @@ body {
   gap: 0.5rem;
   margin-top: 24px;
   margin-bottom: 24px;
+}
+@media (max-width: 376px) {
+  .tag-filters {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .tag {
@@ -147,6 +259,13 @@ body {
   background: #f2f2f2;
   overflow: hidden;
 }
+@media (max-width: 376px) {
+  .event-card {
+    border: 8px solid #f2f2f2;
+    box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);
+    border-radius: 16px;
+  }
+}
 .event-card .card-img-container .btn {
   width: 32px;
   height: 32px;
@@ -161,9 +280,23 @@ body {
   border: none;
   padding: 0;
 }
+@media (max-width: 376px) {
+  .event-card .card-img-container .btn {
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    background-size: 10px 14px;
+  }
+}
 .event-card .card-img-container .btn.active {
   background-image: url("img/bookmark_check.svg");
   background-size: 32px 32px;
+}
+@media (max-width: 376px) {
+  .event-card .card-img-container .btn.active {
+    background-size: 24px 24px;
+  }
 }
 .event-card .card-img-container .tag-filters {
   margin: 8px;
@@ -172,6 +305,12 @@ body {
   border-radius: 18px;
   height: 270px;
   object-fit: cover;
+}
+@media (max-width: 376px) {
+  .event-card .card-img-top {
+    height: 151px;
+    border-radius: 12px;
+  }
 }
 .event-card .event-datetime {
   font-family: "Ubuntu", sans-serif;
@@ -182,6 +321,12 @@ body {
   font-size: 14px;
   line-height: 114%;
   color: #838383;
+}
+@media (max-width: 376px) {
+  .event-card .event-datetime {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
 }
 .event-card .event-datetime img {
   margin-bottom: 3px;
@@ -201,6 +346,12 @@ body {
   -webkit-line-clamp: 2; /* Количество строк */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+@media (max-width: 376px) {
+  .event-card .card-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
 }
 .event-card .price {
   font-family: "Lato", sans-serif;
@@ -225,6 +376,13 @@ body {
   padding: 4px 8px;
   display: none;
 }
+@media (max-width: 376px) {
+  .event-card .tag {
+    font-size: 9px;
+    line-height: 133%;
+    padding: 3px 6px;
+  }
+}
 
 .event-card.event-card-cancelled {
   border: 24px solid #fff;
@@ -232,6 +390,13 @@ body {
   border-radius: 18px;
   background: #fff;
   box-shadow: 0 0 0 1px #f4f4f4;
+}
+@media (max-width: 376px) {
+  .event-card.event-card-cancelled {
+    border: 8px solid #fff;
+    box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);
+    border-radius: 16px;
+  }
 }
 .event-card.event-card-cancelled .card-title {
   color: #747474;
@@ -310,7 +475,7 @@ body {
     margin-top: -18px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .footer__margin-minus {
     margin-top: -103px;
   }
@@ -341,7 +506,7 @@ body {
   font-size: 24px;
   margin-bottom: 14px;
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .footer__title {
     font-size: 16px;
   }
@@ -360,7 +525,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .footer__link {
     font-size: 12px;
     line-height: 1.33;

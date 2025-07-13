@@ -1,6 +1,7 @@
 /* Палитра цветов */
 $color-purple: #f9f5ff;
 $color-purple-hover:#7f56d9;
+$color-purple-light:#564dbb;
 $color-blue: #eff6ff;
 $color-blue-hover:#2b68e5;
 $color-green: #effaf3;
@@ -32,6 +33,10 @@ $font-ubuntu-italic: italic;
 $font-lato-medium: 500;
 $font-lato-bold: 700;
 
+
+
+
+
 /* Глобальные стили */
 body {
   font-family: $font-ubuntu;
@@ -48,7 +53,131 @@ body {
   margin: 0 auto;
 }
 
+
+
+
+
+
 /* Секция фильтров */
+
+
+.filter-block {
+  background-color: #564dbb;
+  border-radius: 0 0 24px 24px;
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
+  @media (max-width: 376px) {
+    border-radius: 0 0 16px 16px;
+
+  }
+  &__icon {
+    margin-left: 8px;
+    display: inline-flex!important;
+    align-items: center;
+    @media (max-width: 768px) {
+      margin-left: 0px;
+      padding: 4px 2px;
+
+    }
+    @media (max-width: 577px) {
+      margin-left: auto;
+
+    }
+
+    &.rotated .filter-block__arrow {
+      transform: rotate(180deg);
+    }
+
+    .filter-block__arrow {
+
+      transition: transform 0.3s ease;
+    }
+
+
+  }
+  .form-group {
+    margin-right: 1px;
+  }
+  &__filter-placeholder {
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-white;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+  input[type="date"] {
+
+    color: transparent; // или нужный цвет текста
+
+  }
+
+
+  &__select,
+  &__input {
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 9px 16px;
+    background: rgba(70, 66, 66, 0.6);
+  }
+  &__input-left {
+    border-radius: 20px 0 0 24px;
+    margin-right: 1px;
+
+  }
+  &__input-right {
+    border-radius: 0 20px 20px 0;
+
+  }
+
+  &__select:focus,
+  &__input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &__toggle {
+    display: flex;
+    margin-left: auto;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 9px 16px;
+    @media (max-width: 768px) {
+      font-size: 0px;
+    }
+    @media (max-width: 576px) {
+      font-size: 14px!important;
+      width: 100%;
+
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+
+  }
+
+  @media (max-width: 768px) {
+    .filter-block__extra {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+
+
+/*
 .filters-section {
   background-color:  #564dbb;
   padding: 1rem ;
@@ -87,7 +216,7 @@ body {
     }
   }
 }
-
+*/
 /* Теги-фильтры */
 .tag-filters {
   display: flex;
@@ -95,6 +224,13 @@ body {
   gap: 0.5rem;
   margin-top: 24px;
   margin-bottom: 24px;
+  @media (max-width: 376px) {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+  }
 }
 .tag {
 
@@ -175,6 +311,11 @@ body {
 
 
   overflow: hidden;
+  @media (max-width: 376px) {
+    border: 8px solid $color-light-grey;
+    box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);
+    border-radius: 16px;
+  }
 
   .card-img-container {
     .btn {
@@ -190,10 +331,22 @@ body {
       background-size: 12px 18px;
       border: none;
       padding: 0;
+      @media (max-width: 376px) {
+        margin-top: 8px;
+        margin-right: 8px;
+        width: 24px;
+        height: 24px;
+        background-size: 10px 14px;
+
+      }
     }
     .btn.active {
       background-image: url('img/bookmark_check.svg');
       background-size: 32px 32px;
+      @media (max-width: 376px) {
+        background-size: 24px 24px;
+
+      }
     }
     .tag-filters {
       margin: 8px;
@@ -205,6 +358,10 @@ body {
     height: 270px;
 
     object-fit: cover;
+    @media (max-width: 376px) {
+      height: 151px;
+      border-radius: 12px;
+    }
   }
   .event-datetime {
     font-family: $font-ubuntu;
@@ -217,6 +374,11 @@ body {
     font-size: 14px;
     line-height: 114%;
     color: $color-dark-grey-text;
+    @media (max-width: 376px) {
+      font-size: 9px;
+      margin-bottom: 4px;
+
+    }
     img {
       margin-bottom: 3px;
     }
@@ -238,6 +400,11 @@ body {
     -webkit-line-clamp: 2; /* Количество строк */
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @media (max-width: 376px) {
+      font-size: 14px;
+      margin-bottom: 8px;
+
+    }
 
   }
   .price {
@@ -265,6 +432,14 @@ body {
     display: none;
 
   }
+  .tag {
+    @media (max-width: 376px) {
+      font-size: 9px;
+      line-height: 133%;
+      padding: 3px 6px;
+    }
+
+  }
 
 }
 
@@ -274,6 +449,11 @@ body {
   border-radius: 18px;
   background: $color-white;
   box-shadow: 0 0 0 1px #f4f4f4;
+  @media (max-width: 376px) {
+    border: 8px solid  $color-white;
+    box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);
+    border-radius: 16px;
+  }
   .card-title {
     color: #747474;
   }
@@ -361,7 +541,7 @@ body {
      margin-top: -18px;
 
     }
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       margin-top: -103px;
 
     }
@@ -395,7 +575,7 @@ body {
     line-height: 1;
     font-size: 24px;
     margin-bottom: 14px;
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       font-size: 16px;
 
     }
@@ -416,7 +596,7 @@ body {
     transition: color 0.2s;
     font-size: 16px;
     line-height: 1.5;
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       font-size: 12px;
       line-height: 1.33;
     }
@@ -471,6 +651,7 @@ body {
   }
 }
 
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1600px;
@@ -488,6 +669,3 @@ body {
   }
 
 }
-
-
-

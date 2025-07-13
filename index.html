@@ -13,51 +13,141 @@
 
 <div class="container">
     <!-- Фильтры -->
-    <div class="filters-section ">
-        <div class="row g-3 align-items-center">
-            <div class="col-md-2">
-                <select class="form-select">
-                    <option selected>События</option>
-                    <option value="1">Концерт</option>
-                    <option value="2">Выставка</option>
-                </select>
+    <div class="filter-block bg-purple text-white rounded-bottom-4 py-2 py-sm-3 px-1 px-md-4">
+        <div class="container">
+            <div class="row g-3 align-items-center filter-block__row">
+                <!-- События -->
+                <div class="col-md-2 col-sm-5 d-none d-sm-block">
+                    <select class="form-select filter-block__select">
+                        <option selected>События</option>
+                    </select>
+                </div>
+                <!-- Площадка -->
+                <div class="col-md-2 col-sm-5 d-none d-sm-block">
+                    <select class="form-select filter-block__select">
+                        <option selected>Площадка</option>
+                    </select>
+                </div>
+                <!-- Город -->
+                <div class="col-6 col-md-2 d-none d-md-block">
+                    <select class="form-select filter-block__select">
+                        <option selected>Тольятти</option>
+                    </select>
+                </div>
+                <!-- Дата от -->
+                <div class="col-6 col-md-3 d-none d-md-flex">
+                    <!-- Дата от -->
+                    <div class="form-group position-relative w-50">
+                    <label for="date-from" class="form-label position-absolute filter-block__filter-placeholder">Дата, с</label>
+                    <input id="date-from" type="date" class="form-control filter-block__input filter-block__input-left" placeholder="Дата, с">
+                    </div>
+                        <!-- Дата по -->
+                    <div class="form-group position-relative w-50">
+                        <label for="date-to" class="form-label position-absolute filter-block__filter-placeholder">по</label>
+                        <input id="date-to" type="date" class="form-control filter-block__input filter-block__input-right" placeholder="по">
+                    </div>
+                </div>
+
+                <!-- Кнопка "Все фильтры" / "Скрыть" -->
+                <div class="col-md-3 col-sm-2 text-end display-flex justify-content-end ms-auto">
+                    <button class="btn btn-toggle filter-block__toggle top-toggle">Все фильтры
+                        <span class=" filter-block__icon ">
+
+
+
+    <svg class="filter-block__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.14652 7.14472C9.34179 6.94946 9.34179 6.63286 9.14652 6.43761L6.70043 3.99391C6.30983 3.60371 5.67693 3.60386 5.28653 3.99421L2.84138 6.43941C2.64608 6.63466 2.64608 6.95126 2.84138 7.14652C3.03663 7.34178 3.35323 7.34178 3.54848 7.14652L5.64128 5.05371C5.83653 4.85841 6.15313 4.85846 6.34838 5.05371L8.43942 7.14472C8.63468 7.33998 8.95126 7.33998 9.14652 7.14472Z" fill="white" />
+    </svg>
+  </span>
+                    </button>
+
+
+                </div>
             </div>
-            <div class="col-md-2">
-                <select class="form-select">
-                    <option selected>Площадка</option>
-                    <option value="1">Площадка 1</option>
-                    <option value="2">Площадка 2</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <select class="form-select">
-                    <option selected>Город</option>
-                    <option value="1">Тольятти</option>
-                    <option value="2">Самара</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <input type="date" class="form-control" placeholder="Дата, с">
-            </div>
-            <div class="col-md-2">
-                <input type="date" class="form-control" placeholder="по">
-            </div>
-            <div class="col-md-2">
-                <button class="btn  ">Все фильтры</button>
+
+            <!-- Раскрывающийся блок (по умолчанию скрыт) -->
+            <div class="row g-2 g-md-3 mt-1  d-none filter-block__extra">
+
+                <div class="col-12 col-md-2 d-block d-sm-none">
+                    <select class="form-select filter-block__select">
+                        <option selected>События</option>
+                    </select>
+                </div>
+                <!-- Площадка -->
+                <div class="col-12 col-md-2 d-block d-sm-none">
+                    <select class="form-select filter-block__select">
+                        <option selected>Площадка</option>
+                    </select>
+                </div>
+
+
+                <div class="col-12 col-sm-5 col-md-2 d-block d-md-none">
+                    <select class="form-select filter-block__select">
+                        <option selected>Город</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-5 col-md-2  d-md-none d-flex">
+                    <!-- Дата от -->
+                    <div class="form-group position-relative w-50">
+                        <label for="date-from" class="form-label position-absolute filter-block__filter-placeholder">Дата, с</label>
+                        <input id="date-from" type="date" class="form-control filter-block__input filter-block__input-left" placeholder="Дата, с">
+                    </div>
+                    <!-- Дата по -->
+                    <div class="form-group position-relative w-50">
+                        <label for="date-to" class="form-label position-absolute filter-block__filter-placeholder">по</label>
+                        <input id="date-to" type="date" class="form-control filter-block__input filter-block__input-right" placeholder="по">
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-5 col-md-2  ">
+                    <div class="form-group position-relative d-flex">
+                        <!-- Цена от -->
+                    <select class="form-select filter-block__select filter-block__input-left">
+                        <option selected>Цена, от</option>
+                    </select>
+                        <!-- Цена до -->
+                        <select class="form-select filter-block__select filter-block__input-right">
+                            <option selected>до</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- Организатор -->
+                <div class="col-12 col-sm-5 col-md-2 ">
+                    <select class="form-select filter-block__select">
+                        <option selected>Организатор</option>
+                    </select>
+                </div>
+                <div class="col-12  col-6 col-md-2 d-block d-sm-none">
+                    <button class="btn btn-toggle filter-block__toggle w-100 w-md-auto bottom-toggle">Скрыть
+                        <span class=" filter-block__icon ">
+
+
+
+    <svg class="filter-block__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.14652 7.14472C9.34179 6.94946 9.34179 6.63286 9.14652 6.43761L6.70043 3.99391C6.30983 3.60371 5.67693 3.60386 5.28653 3.99421L2.84138 6.43941C2.64608 6.63466 2.64608 6.95126 2.84138 7.14652C3.03663 7.34178 3.35323 7.34178 3.54848 7.14652L5.64128 5.05371C5.83653 4.85841 6.15313 4.85846 6.34838 5.05371L8.43942 7.14472C8.63468 7.33998 8.95126 7.33998 9.14652 7.14472Z" fill="white" />
+    </svg>
+  </span>
+                    </button>
+
+                </div>
             </div>
         </div>
     </div>
 
+
     <!-- Теги-фильтры -->
     <div class="tag-filters ">
-        <button type="button" class="tag purple">Пушкинская карта</button>
+        <button type="button" class="tag purple">Пушкинская&nbsp;карта</button>
         <button type="button" class="tag blue">Детям</button>
-        <button type="button" class="tag green">Рекомендуемые события</button>
+        <button type="button" class="tag green">Рекомендуемые&nbsp;события</button>
         <button type="button" class="tag orange">Юмор</button>
-        <button type="button" class="tag cream">Местные театры</button>
-        <button type="button" class="tag pink">На этой неделе</button>
+        <button type="button" class="tag cream">Местные&nbsp;театры</button>
+        <button type="button" class="tag pink">На&nbsp;этой&nbsp;неделе</button>
 
-        <button type="button" class="tag green">В этом месяце</button>
+        <button type="button" class="tag green">В&nbsp;этом&nbsp;месяце</button>
     </div>
 
     <!-- Сетка карточек событий -->
@@ -859,7 +949,7 @@
 
     </div>
 
-    <div class="row g-3 mt-5 mb-5">
+    <div class="row g-3 mt-1 mt-sm-5 mb-5">
         <div class="col-12 mt-0">
             <div class="button-all ">
                 <button class="btn  ">Все фильтры</button>
@@ -954,14 +1044,14 @@
 
 
 <script>
-
+    /*BOOKMARK*/
     document.querySelectorAll('.bookmark-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             btn.classList.toggle('active');
         });
     });
 
-
+    /*BUNNER*/
     document.addEventListener("DOMContentLoaded", () => {
         const row = document.querySelector(".row-xxl-5-cols");
         const cols = row.querySelectorAll(".col"); // все колонки (включая карточки)
@@ -986,6 +1076,52 @@
             cols[targetIndex - 1].insertAdjacentElement("afterend", bannerCol);
         }
     });
+/*FILTER ALL BUTTON*/
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const extra = document.querySelector('.filter-block__extra');
+        const toggleBtn = document.querySelector('.filter-block__toggle');
+        const iconWrapper = toggleBtn.querySelector('.filter-block__icon');
+        const topToggle = document.querySelector('.filter-block__toggle.top-toggle'); // верхняя кнопка
+        const bottomToggle = document.querySelector('.filter-block__toggle.bottom-toggle'); // нижняя кнопка
+
+        const isMobile = () => window.innerWidth < 576;
+
+        const updateTopButtonText = () => {
+            if (isMobile()) {
+                topToggle.textContent = 'Фильтры';
+            } else {
+                topToggle.textContent = extra.classList.contains('d-none') ? 'Все фильтры' : 'Скрыть';
+                toggleBtn.appendChild(iconWrapper);
+                iconWrapper.classList.toggle('rotated', isShown);
+            }
+        };
+
+        // Верхняя кнопка (меняет текст только на >576px)
+        topToggle?.addEventListener('click', () => {
+            const isShown = !extra.classList.contains('d-none');
+            extra.classList.toggle('d-none');
+            if (!isMobile()) {
+                topToggle.textContent = isShown ? 'Все фильтры' : 'Скрыть';
+                toggleBtn.appendChild(iconWrapper);
+                iconWrapper.classList.toggle('rotated', isShown);
+            }
+        });
+
+        // Нижняя кнопка (мобильная): всегда закрывает
+        bottomToggle?.addEventListener('click', () => {
+            extra.classList.add('d-none');
+            updateTopButtonText(); // Обновить верхнюю, если >576px
+        });
+
+        // При загрузке
+        updateTopButtonText();
+
+        // При ресайзе
+        window.addEventListener('resize', updateTopButtonText);
+    });
+
 
 
 </script>

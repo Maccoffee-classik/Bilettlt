@@ -225,10 +225,15 @@ body {
   margin-top: 24px;
   margin-bottom: 24px;
   @media (max-width:  500px) {
-    flex-wrap: nowrap;
-    overflow: hidden;
+
+
     margin-top: 16px;
     margin-bottom: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; // для плавности на iOS
+
 
   }
 }

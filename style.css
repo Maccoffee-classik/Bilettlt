@@ -166,10 +166,12 @@ body {
 }
 @media (max-width: 500px) {
   .tag-filters {
-    flex-wrap: nowrap;
-    overflow: hidden;
     margin-top: 16px;
     margin-bottom: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

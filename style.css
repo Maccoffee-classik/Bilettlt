@@ -22,7 +22,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .filter-block {
     border-radius: 0 0 16px 16px;
   }
@@ -164,7 +164,7 @@ body {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .tag-filters {
     flex-wrap: nowrap;
     overflow: hidden;
@@ -259,7 +259,7 @@ body {
   background: #f2f2f2;
   overflow: hidden;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card {
     border: 8px solid #f2f2f2;
     box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);
@@ -280,7 +280,7 @@ body {
   border: none;
   padding: 0;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card .card-img-container .btn {
     margin-top: 8px;
     margin-right: 8px;
@@ -293,7 +293,7 @@ body {
   background-image: url("img/bookmark_check.svg");
   background-size: 32px 32px;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card .card-img-container .btn.active {
     background-size: 24px 24px;
   }
@@ -306,7 +306,7 @@ body {
   height: 270px;
   object-fit: cover;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card .card-img-top {
     height: 151px;
     border-radius: 12px;
@@ -322,7 +322,7 @@ body {
   line-height: 114%;
   color: #838383;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card .event-datetime {
     font-size: 9px;
     margin-bottom: 4px;
@@ -347,7 +347,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card .card-title {
     font-size: 14px;
     margin-bottom: 8px;
@@ -376,7 +376,7 @@ body {
   padding: 4px 8px;
   display: none;
 }
-@media (max-width: 376px) {
+@media (max-width: 576px) {
   .event-card .tag {
     font-size: 9px;
     line-height: 133%;
@@ -391,7 +391,7 @@ body {
   background: #fff;
   box-shadow: 0 0 0 1px #f4f4f4;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .event-card.event-card-cancelled {
     border: 8px solid #fff;
     box-shadow: 0 4px 16px 0 rgba(123, 104, 56, 0.15), 0 0 25px 0 rgba(123, 104, 56, 0.1);
@@ -475,7 +475,7 @@ body {
     margin-top: -18px;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .footer__margin-minus {
     margin-top: -103px;
   }
@@ -506,7 +506,7 @@ body {
   font-size: 24px;
   margin-bottom: 14px;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .footer__title {
     font-size: 16px;
   }
@@ -525,7 +525,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-@media (max-width: 376px) {
+@media (max-width: 400px) {
   .footer__link {
     font-size: 12px;
     line-height: 1.33;

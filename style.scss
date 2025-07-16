@@ -22,6 +22,17 @@ $color-light-grey: #f2f2f2;
 $color-light: #F7F7F7;
 $color-dark: #000;
 $color-white:#fff;
+
+$header-bg: #333333;
+$mobile-bg: #f4f4f4;
+$font-color-dark: #333333;
+$font-color-light: #ffffff;
+$color-pushkin: #8e44ad;
+$color-humor: #e67e22;
+$color-kids: #3498db;
+
+
+
 $font-ubuntu: 'Ubuntu', sans-serif;
 $font-lato: 'Lato', sans-serif;
 $font-onest: 'Onest', sans-serif;
@@ -34,7 +45,258 @@ $font-lato-medium: 500;
 $font-lato-bold: 700;
 
 
+.header {
+  background-color: $header-bg;
+  color: $font-color-light;
+  width: 100%;
+  z-index: 1000;
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__logo img {
+    max-height: 40px;
+  }
+  &__nav {
+    margin-left: 1rem;
+    ul.header__menu {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+  &__menu-item {
+    margin: 0 0.5rem;
+  }
+  &__menu-item a {
+    color: $font-color-light;
+    text-decoration: none;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 0.2rem 0.5rem;
+    margin-right: 1rem;
+    &-input {
+      border: none;
+      outline: none;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+    &-btn {
+      border: none;
+      background: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+  &__phone {
+    margin-right: 1rem;
+  }
+  &__city {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    &-icon {
+      margin-right: 0.3rem;
+    }
+    &-name {
+      margin-right: 0.3rem;
+    }
+    &-arrow {
+      margin-left: 0.3rem;
+    }
+  }
+  &__burger {
+    background: none;
+    border: none;
+    color: $font-color-light;
+    font-size: 1.5rem;
+    display: none;
+  }
+}
 
+@media (max-width: 767.98px) {
+  .header {
+    .header__nav, .header__search, .header__phone {
+      display: none;
+    }
+    .header__burger {
+      display: block;
+    }
+  }
+}
+
+.offcanvas.mobile-menu {
+  background-color: $mobile-bg;
+  width: 100% !important;
+}
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.mobile-menu__logo img {
+  max-height: 40px;
+}
+.mobile-menu__city {
+  display: flex;
+  align-items: center;
+}
+.mobile-menu__city-name {
+  margin-right: 0.5rem;
+}
+.mobile-menu__close {
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mobile-menu__nav {
+  padding: 1rem;
+}
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu__item {
+  margin: 1rem 0;
+}
+.mobile-menu__item a {
+  color: $font-color-dark;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.mobile-menu__footer {
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-menu__phone {
+  margin-bottom: 1rem;
+  color: $font-color-dark;
+  font-weight: bold;
+}
+.mobile-menu__socials {
+  display: flex;
+  gap: 1rem;
+}
+.mobile-menu__social-icon {
+  font-size: 1.5rem;
+  color: $font-color-dark;
+}
+.carousel-inner {
+  border-radius: 0 0 24px 24px;
+}
+
+
+.slider {
+  &__slide {
+    position: relative;
+    .slider__image {
+      filter: brightness(0.7);
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+  }
+  &__info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px; // обязательно
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+  &__date {
+    $font-ubuntu: 'Ubuntu', sans-serif;
+    $font-ubuntu-regular: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #fff;
+
+
+  }
+  &__title {
+
+    font-size: 48px;
+    line-height: 117%;
+    color: #fff;
+    $font-lato: 'Lato', sans-serif;
+
+    $font-lato-bold: 700;
+  }
+  &__price {
+    display: inline;
+
+    font-family: $font-lato;
+    font-weight: $font-lato-bold;
+    font-size: 18px;
+    line-height: 143%;
+    background-color: $color-gold;
+    color: #fff;
+    border-radius: 24px;
+    padding: 8px 16px;
+    width: auto;
+
+
+  }
+  &__tags {
+    margin-top: 0.5rem;
+  }
+  &__tag {
+
+    font-family:$font-lato;
+    font-weight: $font-lato-medium;
+    border-radius: 18px;
+    padding: 4px 8px!important;
+    font-size: 12px;
+    line-height: 133%;
+
+    border: none;
+    display: inline-block;
+
+    margin-right:2px!important;
+  }
+
+}
+
+
+
+@media (max-width: 767.98px) {
+  .slider__info {
+    bottom: 10px;
+    left: 10px;
+  }
+  .slider__title {
+    font-size: 1.2rem;
+  }
+}
 
 
 /* Глобальные стили */
@@ -62,6 +324,7 @@ body {
 
 
 .filter-block {
+  margin: 0 24px;
   background-color: #564dbb;
   border-radius: 0 0 24px 24px;
   font-family: $font-ubuntu;
@@ -69,6 +332,13 @@ body {
   @media (max-width:  500px) {
     border-radius: 0 0 16px 16px;
 
+  }
+  .form-control:focus {
+
+    background-color: rgba(70, 66, 66, 0.6);
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
   }
   &__icon {
     margin-left: 8px;
@@ -105,7 +375,13 @@ body {
     color: $color-white;
     pointer-events: none;
     transition: 0.2s;
+    pointer-events: none;
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
+
   input[type="date"] {
 
     color: transparent; // или нужный цвет текста
@@ -662,6 +938,7 @@ body {
     max-width: 1600px;
     margin: 0 auto;
   }
+
   .row-xxl-5-cols > .col {
     flex: 0 0 20%;
     max-width: 20%;

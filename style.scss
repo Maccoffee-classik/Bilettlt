@@ -23,7 +23,7 @@ $color-light: #F7F7F7;
 $color-dark: #000;
 $color-white:#fff;
 
-$header-bg: #333333;
+$header-bg: rgba(0, 0, 0, 0.4);
 $mobile-bg: #f4f4f4;
 $font-color-dark: #333333;
 $font-color-light: #ffffff;
@@ -46,15 +46,21 @@ $font-lato-bold: 700;
 
 
 .header {
-  background-color: $header-bg;
+
   color: $font-color-light;
   width: 100%;
   z-index: 1000;
   .header__container {
+    background-color: $header-bg;
+    backdrop-filter: blur(4px);
+    width: 80%;
+    max-width: 1089px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 8px;
+    border-radius: 48px;
+    margin-top: 24px;
   }
   &__left {
     display: flex;
@@ -65,23 +71,58 @@ $font-lato-bold: 700;
     align-items: center;
   }
   &__logo img {
-    max-height: 40px;
+    max-height: 64px;
+
   }
   &__nav {
-    margin-left: 1rem;
+    margin-left:48px;
+    display: flex;
+    align-items: baseline;
+
     ul.header__menu {
       display: flex;
       margin: 0;
       padding: 0;
       list-style: none;
+      margin-right: 48px;
     }
   }
   &__menu-item {
-    margin: 0 0.5rem;
+    margin: 0;
+  }
+  &__menu-item:nth-child(2) {
+    position: relative;
+    margin: 0 16px;
+    padding: 0rem 16px;
+
+  }
+  &__menu-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  &__menu-item:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.4);
   }
   &__menu-item a {
-    color: $font-color-light;
+    $font-ubuntu: 'Ubuntu', sans-serif;
+    $font-ubuntu-regular: 400;
     text-decoration: none;
+    font-size: 14px;
+    line-height: 100%;
+    color: $color-white;
   }
   &__search {
     display: flex;

@@ -61,6 +61,15 @@ $font-lato-bold: 700;
     padding: 8px;
     border-radius: 48px;
     margin-top: 24px;
+    @media (max-width:  1300px) {
+      width: 96%;
+    }
+    @media (max-width:  500px) {
+      margin-top: 4px;
+      width: 80%;
+      padding: 4px;
+
+    }
   }
   &__left {
     display: flex;
@@ -72,12 +81,19 @@ $font-lato-bold: 700;
   }
   &__logo img {
     max-height: 64px;
+    @media (max-width:  500px) {
+      max-height: 32px;
+
+    }
 
   }
   &__nav {
     margin-left:48px;
     display: flex;
     align-items: baseline;
+    @media (max-width:  1300px) {
+      margin-left:24px;
+    }
 
     ul.header__menu {
       display: flex;
@@ -85,6 +101,9 @@ $font-lato-bold: 700;
       padding: 0;
       list-style: none;
       margin-right: 48px;
+      @media (max-width:  1300px) {
+        margin-right: 24px;
+      }
     }
   }
   &__menu-item {
@@ -117,8 +136,8 @@ $font-lato-bold: 700;
     background: rgba(255, 255, 255, 0.4);
   }
   &__menu-item a {
-    $font-ubuntu: 'Ubuntu', sans-serif;
-    $font-ubuntu-regular: 400;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
     text-decoration: none;
     font-size: 14px;
     line-height: 100%;
@@ -127,39 +146,105 @@ $font-lato-bold: 700;
   &__search {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
-    padding: 0.2rem 0.5rem;
+    padding: 0;
     margin-right: 1rem;
     &-input {
+      padding: 10px 0 10px 16px;
+      background: rgba(255, 255, 255, -0.4);
       border: none;
       outline: none;
-      margin-right: 0.5rem;
+
       font-size: 0.9rem;
+      &::placeholder {
+        font-family: $font-ubuntu;
+        font-weight: $font-ubuntu-regular;
+        font-size: 14px;
+        line-height: 114%;
+        color: $color-white;
+      }
     }
     &-btn {
       border: none;
       background: none;
       font-size: 1rem;
       cursor: pointer;
+      padding-right: 16px;
+      padding-left: 0;
     }
   }
   &__phone {
-    margin-right: 1rem;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-medium;
+    margin-right: 24px;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    @media (max-width:  1300px) {
+      margin-right: 12px;
+    }
   }
   &__city {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
     display: flex;
     align-items: center;
-    margin-right: 1rem;
+    margin-right: 48px;
+    padding: 8px 16px;
+    @media (max-width:  1300px) {
+      margin-right: 24px;
+    }
+    @media (max-width:  500px) {
+      padding: 3px 8px;
+
+    }
     &-icon {
       margin-right: 0.3rem;
     }
     &-name {
-      margin-right: 0.3rem;
+      font-family: $font-ubuntu;
+      font-weight: $font-ubuntu-regular;
+      font-size: 14px;
+      line-height: 114%;
+      color: #fff;
+      margin-right: 8px;
+      margin-left: 8px;
     }
     &-arrow {
       margin-left: 0.3rem;
     }
+  }
+  &__btn {
+    width: 32px;
+    height: 32px;
+    margin-top: 0px;
+    margin-right: 24px;
+    background-color: $color-light-grey;
+    border-radius: 8px;
+    background-image: url('img/bookmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 18px;
+    border: none;
+    padding: 0;
+    @media (max-width:  500px) {
+      margin-top: 8px;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      background-size: 10px 14px;
+
+    }
+  }
+  &__btn.active {
+    background-image: url('img/bookmark_check.svg');
+    background-size: 32px 32px;
+    @media (max-width: 500px) {
+      background-size: 24px 24px;
+
+    }
+
   }
   &__burger {
     background: none;
@@ -243,8 +328,50 @@ $font-lato-bold: 700;
   font-size: 1.5rem;
   color: $font-color-dark;
 }
+.carousel {
+  @media (max-width: 500px) {
+    height:180px;
+  }
+  &-item {
+    @media (max-width: 500px) {
+    height: 100%;}
+    img {
+      @media (max-width: 500px) {
+        height: 180px;
+        object-fit: cover;
+        object-position: center;}
+
+    }
+  }
+
+}
 .carousel-inner {
   border-radius: 0 0 24px 24px;
+}
+.carousel-indicators {
+  margin-bottom: 12px;
+  @media (max-width:  500px) {
+    margin-bottom: 6px;
+
+  }
+}
+
+
+.carousel-indicators [data-bs-target] {
+  background-color:rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+  border: none;
+
+}
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #9aa3a5;
+  width: 48px;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
 }
 
 
@@ -265,9 +392,9 @@ $font-lato-bold: 700;
   }
   &__info {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px; // обязательно
+    bottom: 48px;
+    left: 48px;
+    right: 48px; // обязательно
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -275,11 +402,18 @@ $font-lato-bold: 700;
     color: #fff;
   }
   &__date {
-    $font-ubuntu: 'Ubuntu', sans-serif;
-    $font-ubuntu-regular: 400;
+    font-family: $font-ubuntu;
+    font-weight: $font-ubuntu-regular;
     font-size: 18px;
     line-height: 133%;
     color: #fff;
+    margin-bottom: 8px;
+    @media (max-width:  500px) {
+      font-size: 9px;
+      padding-bottom: 4px;
+      margin-bottom:0;
+
+    }
 
 
   }
@@ -288,9 +422,15 @@ $font-lato-bold: 700;
     font-size: 48px;
     line-height: 117%;
     color: #fff;
-    $font-lato: 'Lato', sans-serif;
+    font-family: $font-lato;
 
-    $font-lato-bold: 700;
+    font-weight: $font-lato-bold;
+    padding-bottom:  8px;
+    @media (max-width:  500px) {
+      font-size: 18px;
+      padding-bottom: 4px;
+
+    }
   }
   &__price {
     display: inline;
@@ -304,6 +444,11 @@ $font-lato-bold: 700;
     border-radius: 24px;
     padding: 8px 16px;
     width: auto;
+    @media (max-width:  500px) {
+      font-size: 14px;
+      padding: 2px 8px;
+
+    }
 
 
   }
@@ -323,19 +468,28 @@ $font-lato-bold: 700;
     display: inline-block;
 
     margin-right:2px!important;
+    @media (max-width:  500px) {
+      font-size: 9px!important;
+      padding: 2px 6px!important;
+
+    }
   }
 
 }
 
-
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: none;
+}
 
 @media (max-width: 767.98px) {
   .slider__info {
-    bottom: 10px;
-    left: 10px;
+    bottom: 16px;
+    left: 20px;
+    right: 20px;
   }
   .slider__title {
-    font-size: 1.2rem;
+    font-size: 18px;
+    padding-bottom: 4px;
   }
 }
 

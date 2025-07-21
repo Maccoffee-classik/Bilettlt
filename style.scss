@@ -64,6 +64,10 @@ $font-lato-bold: 700;
     @media (max-width:  1300px) {
       width: 96%;
     }
+    @media (max-width:  1000px) {
+      margin-top: 4px;
+      padding: 4px;
+    }
     @media (max-width:  500px) {
       margin-top: 4px;
       width: 80%;
@@ -229,8 +233,8 @@ $font-lato-bold: 700;
     border: none;
     padding: 0;
     @media (max-width:  500px) {
-      margin-top: 8px;
-      margin-right: 8px;
+      margin-top: 0px;
+      margin-right: 0px;
       width: 24px;
       height: 24px;
       background-size: 10px 14px;
@@ -269,28 +273,50 @@ $font-lato-bold: 700;
 .offcanvas.mobile-menu {
   background-color: $mobile-bg;
   width: 100% !important;
+  height: 300px;
+  border-radius: 0 0 16px 16px;
 }
 .mobile-menu__header {
+  margin: 8px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+
+  backdrop-filter: blur(4px);
+  width: 80%;
+  max-width: 1089px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:4px 4px;
+  border-radius: 48px;
+  backdrop-filter: blur(4px);
+  background: rgba(11, 13, 18, 0.6);
 }
 .mobile-menu__logo img {
-  max-height: 40px;
+  max-height: 32px;
 }
 .mobile-menu__city {
   display: flex;
-  align-items: center;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px 8px;
+
+}
+.header__burger.navbar-toggler .navbar-toggler-icon {
+  padding-top: 4px;
 }
 .mobile-menu__city-name {
+  color: $color-white;
   margin-right: 0.5rem;
 }
 .mobile-menu__close {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   border: none;
   background: none;
   cursor: pointer;
+  margin-right: 16px;
+  color: $color-white;
 }
 .mobile-menu__nav {
   padding: 1rem;
@@ -301,24 +327,35 @@ $font-lato-bold: 700;
   margin: 0;
 }
 .mobile-menu__item {
+
   margin: 1rem 0;
+
+
 }
 .mobile-menu__item a {
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-regular;
   color: $font-color-dark;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 14px;
+  line-height: 114%;
+
 }
 .mobile-menu__footer {
   padding: 1rem;
   border-top: 1px solid #ccc;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .mobile-menu__phone {
+  font-family: $font-ubuntu;
+  font-weight: $font-ubuntu-medium;
   margin-bottom: 1rem;
-  color: $font-color-dark;
-  font-weight: bold;
+
+  font-size: 16px;
+  line-height: 125%;
+  color: #434343;
 }
 .mobile-menu__socials {
   display: flex;
@@ -376,6 +413,11 @@ $font-lato-bold: 700;
 
 
 .slider {
+  &-section {
+    .container {
+      padding: 0;
+    }
+  }
   &__slide {
     position: relative;
     .slider__image {
@@ -519,7 +561,7 @@ body {
 
 
 .filter-block {
-  margin: 0 24px;
+  margin: 0 10px;
   background-color: #564dbb;
   border-radius: 0 0 24px 24px;
   font-family: $font-ubuntu;

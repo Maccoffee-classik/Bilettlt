@@ -22,6 +22,12 @@
     width: 96%;
   }
 }
+@media (max-width: 1000px) {
+  .header .header__container {
+    margin-top: 4px;
+    padding: 4px;
+  }
+}
 @media (max-width: 500px) {
   .header .header__container {
     margin-top: 4px;
@@ -195,8 +201,8 @@
 }
 @media (max-width: 500px) {
   .header__btn {
-    margin-top: 8px;
-    margin-right: 8px;
+    margin-top: 0px;
+    margin-right: 0px;
     width: 24px;
     height: 24px;
     background-size: 10px 14px;
@@ -230,33 +236,54 @@
 .offcanvas.mobile-menu {
   background-color: #f4f4f4;
   width: 100% !important;
+  height: 300px;
+  border-radius: 0 0 16px 16px;
 }
 
 .mobile-menu__header {
+  margin: 8px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  backdrop-filter: blur(4px);
+  width: 80%;
+  max-width: 1089px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 4px;
+  border-radius: 48px;
+  backdrop-filter: blur(4px);
+  background: rgba(11, 13, 18, 0.6);
 }
 
 .mobile-menu__logo img {
-  max-height: 40px;
+  max-height: 32px;
 }
 
 .mobile-menu__city {
   display: flex;
-  align-items: center;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px 8px;
+}
+
+.header__burger.navbar-toggler .navbar-toggler-icon {
+  padding-top: 4px;
 }
 
 .mobile-menu__city-name {
+  color: #fff;
   margin-right: 0.5rem;
 }
 
 .mobile-menu__close {
-  font-size: 1.5rem;
+  font-size: 1rem;
   border: none;
   background: none;
   cursor: pointer;
+  margin-right: 16px;
+  color: #fff;
 }
 
 .mobile-menu__nav {
@@ -274,23 +301,29 @@
 }
 
 .mobile-menu__item a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
   color: #333333;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 14px;
+  line-height: 114%;
 }
 
 .mobile-menu__footer {
   padding: 1rem;
   border-top: 1px solid #ccc;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .mobile-menu__phone {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
   margin-bottom: 1rem;
-  color: #333333;
-  font-weight: bold;
+  font-size: 16px;
+  line-height: 125%;
+  color: #434343;
 }
 
 .mobile-menu__socials {
@@ -351,6 +384,9 @@
   border: none;
 }
 
+.slider-section .container {
+  padding: 0;
+}
 .slider__slide {
   position: relative;
 }
@@ -476,7 +512,7 @@ body {
 
 /* Секция фильтров */
 .filter-block {
-  margin: 0 24px;
+  margin: 0 10px;
   background-color: #564dbb;
   border-radius: 0 0 24px 24px;
   font-family: "Ubuntu", sans-serif;
